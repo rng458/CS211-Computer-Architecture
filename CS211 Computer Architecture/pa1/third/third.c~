@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+struct node {
+  int value;
+  struct node* next;
+};
+
+int main(int argc, char* argv[argc+1]) {
+
+  FILE* instruct = fopen(argv[1], "r");
+
+  if(instruct == 0) {
+    printf("error\n");
+    return EXIT_SUCCESS;
+  }
+
+  char com[7];
+  while(fscanf(instruct, "%s", com) != EOF) {
+    printf("yo");
+  }
+  
+  return EXIT_SUCCESS;
+}
